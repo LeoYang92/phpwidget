@@ -1,0 +1,17 @@
+{
+    "name": "kuyuan/phpwidget",
+    "description": "PHP commot widgets",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kuyuan\\Phpwidget\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "louie",
+            "email": "louie_gk@qq.com"
+        }
+    ],
+    "require": {}
+}
