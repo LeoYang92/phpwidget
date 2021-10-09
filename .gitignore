@@ -2,3 +2,8 @@
 /.vscode
 /vendor/
 test.php
+index.php
+/docker
+docker-compose.yml
+Dockerfile
+/test

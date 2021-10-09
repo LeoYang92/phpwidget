@@ -13,5 +13,9 @@
             "email": "louie_gk@qq.com"
         }
     ],
-    "require": {}
+    "require": {
+        "qiniu/php-sdk": "^7.4",
+        "qcloud/cos-sdk-v5": "^2.3",
+        "aliyuncs/oss-sdk-php": "^2.4"
+    }
 }
