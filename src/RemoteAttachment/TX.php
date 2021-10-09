@@ -2,7 +2,7 @@
 namespace Kuyuan\Phpwidget\RemoteAttachment;
 use Qcloud\Cos\Client;
 
-class Tx extends RemoteAttachment
+class TX extends RemoteAttachment
 {
     // 云存储对象
     private $cosClient = null;
