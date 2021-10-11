@@ -11,7 +11,7 @@ class AL extends RemoteAttachment
     {
         $this->_setting = $_setting;
         try {
-            $this->OssClient = new OssClient($this->_setting['access_key'], $this->_setting['secret_key'], $this->_setting['domain']);
+            $this->OssClient = new OssClient($this->_setting['access_key'], $this->_setting['secret_key'], $this->_setting['region_domain']);
         } catch (OssException $e) {
             print $e->getMessage();
         }
