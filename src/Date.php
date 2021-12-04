@@ -19,4 +19,32 @@ class Date
         }
         return date($_format,$_timestamp);
     }
+
+    /**
+     * 通过一个数字（返回指定月份的开始时间戳和结束时间戳）
+     * @param $_index
+     * @return mixed
+     */
+    public static function monthStartEnd($_index)
+    {
+        $_m = date('m');
+        $_diff = $_m - $_index;
+        // 年差值
+        $_year_diff = 0;
+        if($_diff == 0) {
+            $_year_diff = 1;
+            $_m = 12;
+        } else if($_diff < 0) {
+            $_year_diff = abs(round(($_index - $_m) / 12));
+            $_m = $_m - abs($_diff % 12);
+        } else {
+            $_year_diff = 0;
+            $_m = $_diff;
+        }
+        $_year = date('Y') - $_year_diff;
+        return array(
+            'start' => mktime(0,0,0,$_m,1,$_year),
+            'end' => mktime(23,59,59,$_m,date('t',strtotime($_year.'-'.$_m)),$_year)
+        );
+    }
 }
