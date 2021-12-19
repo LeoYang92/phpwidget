@@ -16,6 +16,8 @@
     "require": {
         "qiniu/php-sdk": "^7.4",
         "qcloud/cos-sdk-v5": "^2.3",
-        "aliyuncs/oss-sdk-php": "^2.4"
+        "aliyuncs/oss-sdk-php": "^2.4",
+        "alibabacloud/darabonba-openapi": "^0.2.3",
+        "alibabacloud/dysmsapi-20170525": "2.0.8"
     }
 }
