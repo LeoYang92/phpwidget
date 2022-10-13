@@ -57,4 +57,5 @@ class QN extends RemoteAttachment
     {
         // TODO: Implement pushString() method.
     }
+
 }

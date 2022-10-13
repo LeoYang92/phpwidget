@@ -23,6 +23,7 @@ abstract class RemoteAttachment
      */
     abstract public function pushString($_path,$_remote_path);
 
+
     /**
      * 删除远程附件
      * @param $_remote_path
