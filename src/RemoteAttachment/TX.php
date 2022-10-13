@@ -63,4 +63,9 @@ class TX extends RemoteAttachment
             return false;
         }
     }
+
+    public function pushString($_path, $_remote_path)
+    {
+        // TODO: Implement pushString() method.
+    }
 }

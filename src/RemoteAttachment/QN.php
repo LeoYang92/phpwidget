@@ -52,4 +52,9 @@ class QN extends RemoteAttachment
         list($ret, $err) = $Manager->delete($this->_setting['bucket'],$_remote_path);
         return !$err;
     }
+
+    public function pushString($_path, $_remote_path)
+    {
+        // TODO: Implement pushString() method.
+    }
 }

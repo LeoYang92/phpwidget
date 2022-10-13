@@ -16,6 +16,14 @@ abstract class RemoteAttachment
     abstract public function push($_path,$_remote_path);
 
     /**
+     * 上传字符串
+     * @param string $_path 字符串内容
+     * @param $_remote_path
+     * @return mixed
+     */
+    abstract public function pushString($_path,$_remote_path);
+
+    /**
      * 删除远程附件
      * @param $_remote_path
      * @return mixed

@@ -46,4 +46,20 @@ class AL extends RemoteAttachment
             return false;
         }
     }
+
+    /**
+     * 上传字符串
+     * @param string $_path 字符串内容
+     * @param $_remote_path
+     * @return bool|void
+     */
+    public function pushString($_path, $_remote_path)
+    {
+        try{
+            $this->OssClient->putObject($this->_setting['bucket'], $_remote_path);
+            return true;
+        } catch (OssException $e) {
+            printf($e->getMessage());
+        }
+    }
 }
