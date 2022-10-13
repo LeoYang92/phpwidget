@@ -82,6 +82,7 @@ class AL extends RemoteAttachment
         //设置参数，发起请求。
         try {
             $result = AlibabaCloud::rpc()
+                ->scheme('https')
                 ->product('Sts')
                 ->version('2015-04-01')
                 ->action('AssumeRole')
