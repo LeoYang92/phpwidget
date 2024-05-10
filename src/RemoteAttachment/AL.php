@@ -10,6 +10,12 @@ class AL extends RemoteAttachment
 {
     private $OssClient = null;
 
+    /**
+     *'access_key' => '',   // 阿里云access Id
+     *'secret_key' => '',   // 阿里云secret
+     *'region_domain' => '', // 阿里云地域节点
+     *'bucket' => ''  阿里云空间标识
+     */
     public function __construct(array $_setting)
     {
         $this->_setting = $_setting;
@@ -100,6 +106,20 @@ class AL extends RemoteAttachment
         } catch (ClientException $e) {
             printf($e->getMessage());
         } catch (ServerException $e) {
+            printf($e->getMessage());
+        }
+    }
+
+    /**
+     * 返回私有文件访问链接
+     * @param $_remote_path 远程文件路径
+     * @param $expires 访问链接的有效时长  
+     */ 
+    public function privateUrl($_remote_path, $expires = 3600)
+    {
+        try{
+            return $this->OssClient->signUrl($this->_setting['bucket'],$_remote_path,$expires);  
+        } catch (OssException $e) {
             printf($e->getMessage());
         }
     }

@@ -1,4 +1,11 @@
 <?php
+/*
+ * @Author: error: git config user.name & please set dead value or install git
+ * @Date: 2024-05-10 10:56:36
+ * @LastEditors: error: git config user.name & please set dead value or install git
+ * @LastEditTime: 2024-05-10 11:29:15
+ * @Description: 
+ */
 namespace Kuyuan\Phpwidget\RemoteAttachment;
 use Qcloud\Cos\Client;
 
@@ -67,6 +74,16 @@ class TX extends RemoteAttachment
     public function pushString($_path, $_remote_path)
     {
         // TODO: Implement pushString() method.
+    }
+
+     /**
+     * 返回私有文件访问链接
+     * @param $_remote_path 远程文件路径
+     * @param $expires 访问链接的有效时长  
+     */  
+    public function privateUrl($_remote_path, $expires = 3600)
+    {
+        
     }
 
 }
